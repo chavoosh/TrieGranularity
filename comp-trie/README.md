@@ -120,5 +120,5 @@ By using [-H] option you can set the initial size of hash tables at each node. E
   program in report mode, run `render.sh` script to see the visualized representation of generated
   trie.
 - To show the graph we use `dot` and `xpdf` tools. Here are some useful tips about `xpdf`:  
-    - ZOOM IN/OUT = Ctrl + '+'/'-'
+    - ZOOM IN/OUT = `Ctrl` + `+`/`-`
     - Slide = Keep the screen with mouse and slide
