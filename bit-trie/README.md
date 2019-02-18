@@ -94,5 +94,5 @@ run the program with [-e] option:
   trie.
 
 - To show the graph we use **dot** and **xpdf** tools. Here are some useful tips about **xpdf**:  
-  - ZOOM IN/OUT = Ctrl + '+'/'-'
+  - ZOOM IN/OUT = `Ctrl` + `+`/`-`
   - Slide = Keep the screen with mouse and slide
