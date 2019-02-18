@@ -1,4 +1,4 @@
-TrieGranularity is licensed under the terms of the GNU Lesser General Public License,
+*TrieGranularity* is licensed under the terms of the GNU Lesser General Public License,
 version 3 or later.
 
 ### GNU LESSER GENERAL PUBLIC LICENSE
