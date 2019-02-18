@@ -95,9 +95,9 @@ By using [-H] option you can set the initial size of hash tables at each node. E
 
 
 ## Additiional Notes:
-  You can draw a graph of generated trie by enabling [-R] option (report mode). After running the
+- You can draw a graph of generated trie by enabling [-R] option (report mode). After running the
   program in report mode, run `render.sh` script to see the visualized representation of generated
   trie.
-  To show the graph we use **dot** and **xpdf** tools. Here are some useful tips about **xpdf**:  
+- To show the graph we use **dot** and **xpdf** tools. Here are some useful tips about **xpdf**:  
     - ZOOM IN/OUT = Ctrl + '+'/'-'
     - Slide = Keep the screen with mouse and slide
