@@ -1,5 +1,5 @@
-#TrieGranularity
-TrieGranularity is a free open source software, including four main programs:
+# TrieGranularity
+**TrieGranularity** is a free open source software, including four main programs:
   1- bit-level trie
   2- character-level trie
   3- component-level trie
