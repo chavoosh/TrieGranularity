@@ -20,7 +20,7 @@ In directory `src`, use the following command to run NameGen
 
 For example, one may run `$./ni -i ../dataset/test_URL_input.txt -n 2 -m 8`
 
-Then, NameGen is trained by 2 names from dataset `test_URL_input.txt` and generates a new dataset of 8 NDN-like names.
+Then, NameGen is trained by 2 URLs from dataset `test_URL_input.txt` and generates a new dataset of 8 NDN-like names.
 
 For more information on the structure of NameGen, see Sec. 3 in our recent paper [1]:
 
