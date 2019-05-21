@@ -50,11 +50,11 @@ DEPS= $(patsubst %,$(IDIR)/%,$(_DEPS))
 SRC= main.c name_stat.c parsing.c
 OBJ= $(patsubst %.c,$(ODIR)/%.o,$(SRC))
 
-ni: $(OBJ) 
+ng: $(OBJ) 
 	$(CC) -o $@ $^ $(CFLAGS)
 
 # -- out of src directory --
-ni_: $(OBJ)
+ng_: $(OBJ)
 	$(CC) -o ../$(patsubst %_,%,$@) $^ $(CFLAGS)
 
 $(ODIR)/%.o: %.c $(DEPS)
