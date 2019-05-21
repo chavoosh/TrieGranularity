@@ -15,7 +15,7 @@
  * You should have received copies of the GNU General Public License and GNU Lesser
  * General Public License along with TrieGranularity, e.g., in COPYING.md or LICENSE file.
  * If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  * For list of authors, please see AUTHORS.md file.
  */
 
