@@ -1,4 +1,8 @@
 # TrieGranularity
+
+[![DOI](https://zenodo.org/badge/171184745.svg)](https://zenodo.org/badge/latestdoi/171184745)
+
+
 **TrieGranularity** is a free open source project, including four main programs:
 - bit-level trie
 - character-level trie
