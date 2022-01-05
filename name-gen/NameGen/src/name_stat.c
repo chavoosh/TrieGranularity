@@ -236,9 +236,9 @@ void gen_new_names_o1 (struct general_info *gen, long num_of_new_names)
         //============== BEGIN: calculation of number of components=============
         if(gen->opt_num_of_comps == 0)
         {
+            double random=(rand() * 1.0) / RAND_MAX;
             while (j<MAX_NUM_OF_COMPS)
             {
-                double random=(rand() % 1000000000) / 1000000000.0; //-- [TODO] make it more accourate if necessary --//
                 sum_prob += gen->num_of_comps[j];
                 if (sum_prob >= random)
                     break;
@@ -258,13 +258,19 @@ void gen_new_names_o1 (struct general_info *gen, long num_of_new_names)
         //============== BEGIN: calculation of length of a component=============
             if(gen->opt_comp_length == 0)
             {
+                double random=(rand() * 1.0) / RAND_MAX;
+again:               
                 while (k<MAX_NUM_OF_CHARS_IN_COMP)
                 {
-                    double random=(rand() % 1000000000) / 1000000000.0; //-- [TODO] make it more accourate if necessary --//
                     sum_prob += gen->component[index_comp]->comp_length[k];
                     if (sum_prob >= random)
                         break;
                     k++;
+                }
+                if (k == MAX_NUM_OF_CHARS_IN_COMP) {
+                    k = 0;
+                    random=(rand() * 1.0) / RAND_MAX;
+                    goto again;
                 }
                 new_comp_length = k;
                 new_comp_length++; //-- k is in [0:MAX_NUM_OF_CHARS_IN_COMP-1], but length is in [1:MAX_NUM_OF_CHARS_IN_COMP] --//
@@ -279,7 +285,7 @@ void gen_new_names_o1 (struct general_info *gen, long num_of_new_names)
         //============== BEGIN: generating characters for a component=============
             for (int l=index_in_new_name; l<(index_in_new_name + new_comp_length); l++)
             {
-                double random=(rand() % 1000000000) / 1000000000.0; //-- [TODO] make it more accurate if necessary --//
+                double random=(rand() * 1.0) / RAND_MAX;
                 double sum_markov_o1 = 0;
                 for (int m=0; m<NUM_OF_POSSIBLE_CHARS+1; m++)
                     sum_markov_o1 += gen->component[index_comp]->markov_matrix_o1[state][m];
@@ -336,9 +342,9 @@ void gen_new_names_o2 (struct general_info *gen, long num_of_new_names)
         //============== BEGIN: calculation of number of components=============
         if (gen->opt_num_of_comps == 0)
         {
+            double random=(rand() * 1.0) / RAND_MAX;
             while (j<MAX_NUM_OF_COMPS)
             {
-                double random=(rand() % 1000000000) / 1000000000.0; //-- [TODO] make it more accourate if necessary --//
                 sum_prob += gen->num_of_comps[j];
                 if (sum_prob >= random)
                     break;
@@ -359,13 +365,19 @@ void gen_new_names_o2 (struct general_info *gen, long num_of_new_names)
         //============== BEGIN: calculation of length of a component=============
             if(gen->opt_comp_length == 0)
             {
+                double random=(rand() * 1.0) / RAND_MAX;;
+again:               
                 while (k<MAX_NUM_OF_CHARS_IN_COMP)
                 {
-                    double random=(rand() % 1000000000) / 1000000000.0; //-- [TODO] make it more accourate if necessary --//
                     sum_prob += gen->component[index_comp]->comp_length[k];
                     if (sum_prob >= random)
                         break;
                     k++;
+                }
+                if (k == MAX_NUM_OF_CHARS_IN_COMP) {
+                    k = 0;
+                    random=(rand() * 1.0) / RAND_MAX;
+                    goto again;
                 }
                 new_comp_length = k;
                 new_comp_length++; //-- k is in [0:MAX_NUM_OF_CHARS_IN_COMP-1], but length is in [1:MAX_NUM_OF_CHARS_IN_COMP] --//
@@ -381,7 +393,7 @@ void gen_new_names_o2 (struct general_info *gen, long num_of_new_names)
         //============== BEGIN: generating characters for a component=============
             for (int l=index_in_new_name; l<(index_in_new_name + new_comp_length); l++)
             {
-                double random=(rand() % 1000000000) / 1000000000.0; //-- [TODO] make it more accourate if necessary --//
+                double random=(rand() * 1.0) / RAND_MAX;
                 double sum_markov_o2 = 0;
                 for (int m=0; m<NUM_OF_POSSIBLE_CHARS+1; m++)
                     sum_markov_o2 += gen->component[index_comp]->markov_matrix_o2[state1][state2][m];
